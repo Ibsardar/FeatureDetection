@@ -1,0 +1,34 @@
+////////////////////////////////////////////////////////////////////////////////
+//
+//  Author:         Ibrahim Sardar
+//  Class:          CSCI 557
+//  Filename:       Composition.mpc
+//  Date:           04/12/2018
+//  Description:    MPC file for Computer Vision project #3.
+//                  This file handles all dependencies for mwc.pl script to create a makefile
+//
+////////////////////////////////////////////////////////////////////////////////
+
+project (Proj3) {
+
+    exename = Proj3
+
+    Source_Files {
+        pnmio.cpp
+        matrix.cpp
+        llip.cpp
+        llfd.cpp
+        main.cpp
+    }
+
+    Header_Files {
+        pnmio.h
+        matrix.h
+        llip.h
+        llfd.h
+    }
+
+    specific (make) {
+        compile_flags += -std=c++11
+    }
+}
